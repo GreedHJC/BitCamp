@@ -1,2 +1,2 @@
-# BitCamp
-BitCamp 강의 소스
+# java106
+비트캠프 강의 소스
