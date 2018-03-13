@@ -33,4 +33,3 @@ public class Exam09_3 {
 
 // 인스턴스(instance)란?
 // - 값을 저장하고 있는 메모리.
-// 

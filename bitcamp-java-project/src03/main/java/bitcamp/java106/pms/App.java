@@ -1,8 +1,8 @@
-package java106.pms;
+package bitcamp.java106.pms;
 
 import java.io.InputStream;
 import java.util.Scanner;
-import bitcamp.java106.pms.domain.Team;
+import bitcamp.java106.pms.domain.Team;;
 
 public class App {
 
