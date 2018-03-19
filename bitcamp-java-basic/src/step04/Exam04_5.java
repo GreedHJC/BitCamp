@@ -1,7 +1,7 @@
 // 비트 이동 연산자 : 응용 II
 package step04;
 
-public class Exam04_4{
+public class Exam04_5{
     public static void main(String[] args) {
 
         // Yes/No 또는 true/false 값을 저장할 때
@@ -17,7 +17,7 @@ public class Exam04_4{
         js = false;
         python = true;
         php = false;
-        thml = true;
+        html = true;
         css = false;
 
         // => 물론 배열을 이용할 수 있다.

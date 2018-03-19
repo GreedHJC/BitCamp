@@ -3,8 +3,6 @@ package step06;
 
 import java.util.Scanner;
 
-import com.sun.javafx.runtime.SystemProperties;
-
 
 
 public class Exam01_1{

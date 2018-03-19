@@ -4,7 +4,7 @@ package step05;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Exam04_3 {
+public class Exam04_4 {
     public static void main(String[] args) {
         // 배열은 같은 타입의 값을 보관할 수 있지만, 컬렉션은 다른 타입의 값을 보관할 수 있다.
         // 배열은 크기가 고정되지만, 컬렉션은 크기가 가변적이다.
@@ -15,7 +15,7 @@ public class Exam04_3 {
         list.add(true);
         list.add(365);
         
-        for(int i= 0; i< names.size(); i++){
+        for(int i= 0; i< list.size(); i++){
             System.out.println(list.get(i));
         }
         System.out.println("-----------------------------------------------");

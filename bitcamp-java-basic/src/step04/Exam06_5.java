@@ -1,7 +1,7 @@
 // 증감 연산자 : 후위(post-fix) 감소 연산자 II
 package step04;
 
-public class Exam06_4 {
+public class Exam06_5 {
     public static void main(String[] args) {
         int i = 2; 
         int result = i++ + i++ * i++;

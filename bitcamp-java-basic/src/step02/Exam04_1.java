@@ -34,7 +34,7 @@ public class Exam04_1{
 
       byte b2;
       b2 = 100;
-      b2 = 100L;
+      b2 = (byte) 100L;
       // 4바이트 정수 리터럴에 대해서만 byte나 short 메모리에 유요한 값을
       
 

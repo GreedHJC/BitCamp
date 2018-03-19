@@ -1,8 +1,6 @@
-package step05.assignment;
+package step06.assignment;
 
 import java.util.Scanner;
-
-import com.sun.javafx.runtime.SystemProperties;
 
 
 

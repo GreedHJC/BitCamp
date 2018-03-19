@@ -3,15 +3,15 @@ package step06;
 
 import java.util.Scanner;
 
-class MyObject{
+class MyObject1{
     int a,b;
 }
 public class Exam04_3 {
 
-    static MyObject getMyObject() {
+    static MyObject1 getMyObject() {
         // Exam03_3.java에 정의된 MyObjcet 사용
 
-        MyObject ref = new MyObject();
+        MyObject1 ref = new MyObject1();
         ref.a = 100;
         ref.b = 200;
 
@@ -20,7 +20,7 @@ public class Exam04_3 {
     }
 
     public static void main(String[] args) {
-        MyObject ref;
+        MyObject1 ref;
         ref = getMyObject();
         System.out.println(ref.a);
         System.out.println(ref.b);

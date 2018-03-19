@@ -1,1 +1,11 @@
 *.class
+*.project
+*.classpath
+**/.gradle/
+**/.setting/
+**/bin
+**/build
+**/temp/
+**/.vscode
+
+!duild.gradle
