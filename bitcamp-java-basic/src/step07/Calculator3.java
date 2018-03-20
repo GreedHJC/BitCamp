@@ -27,4 +27,7 @@ public class Calculator3 {
     public static void divide(Calculator3 calc,int value) {
         calc.result /= value;
     }
+    public static int sum(int a, int b) {
+        return a+b;
+    }
 }
