@@ -28,10 +28,7 @@ public class Exam04_1{
 		}
 
 
-		public void compute() {
-			this.sum = this.kor +this.eng + this.math;
-			this.average = this.sum / 3f;
-		}
+		
 	}
 
 	public static void main(String[] args) {
@@ -42,7 +39,7 @@ public class Exam04_1{
 
 		// 생성자를 호출하지 않을 수 있는가?
 		// => 컴파일 오류! 
-		// Score s2 = new Score();
+		// Score s2 = new Score;
 		
 		Score s3 = new Score();
 	}

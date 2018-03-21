@@ -27,7 +27,7 @@ public class Exam02_2 {
         // abs()는 인스턴스 변수를 사용하지도 않는데 이렇게 인스턴스를 생성해야 한다면, 얼마나 낭비적인가.
         
         /*
-          Math  a = new Math();-
+          Math  a = new Math();
           int result = a.abs(value);
          */
         System.out.println(result);

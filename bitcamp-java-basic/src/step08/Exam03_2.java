@@ -28,9 +28,10 @@ public class Exam03_2 {
         
         // c1이 가리키는 인스턴스를 가지고 Method Area에 있는 plus()를 호출한다.
         c1.plus(123);
-        
+        System.out.println(c1.result);
         // c2가 가리키는 인스턴스를 가지고 Method Area에 있는 minus()를 호출한다.
         c2.minus(30);
+        System.out.println(c2.result);
     }
 }
 

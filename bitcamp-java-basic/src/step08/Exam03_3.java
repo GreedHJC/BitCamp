@@ -28,6 +28,7 @@ public class Exam03_3 {
         s1.kor = sc.nextInt();
         s1.eng = sc.nextInt();
         s1.math = sc.nextInt();
+        s1.compute();
         
         System.out.println("성적 데이터를 입력하세요.(예: 홍길동 100 100 100) > ");
         
@@ -36,6 +37,7 @@ public class Exam03_3 {
         s2.kor = sc.nextInt();
         s2.eng = sc.nextInt();
         s2.math = sc.nextInt();
+        s2.compute();
       
         System.out.printf("%s, %d, %d, %d, %d, %.1f\n", s1.name, s1.kor, s1.eng, s1.math, s1.sum, s1.average);
         
