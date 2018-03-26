@@ -65,8 +65,6 @@ public class App {
                 memberController.service(menu, option);
             } else if (menu.startsWith("board/")) {
                 boardController.service(menu, option);
-            } else if (menu.startsWith("task/add/")){
-                System.out.println();
             } else {
                 System.out.println("명령어가 올바르지 않습니다.");
             }

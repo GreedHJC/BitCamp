@@ -1,11 +1,10 @@
 package bitcamp.java106.pms.dao;
 
+import bitcamp.java106.pms.domain.Task;
 import bitcamp.java106.pms.domain.Team;
 
-public class TeamDao {
-    Team[] teams = new Team[1000];
-    int teamIndex = 0;
-    
+public class TaskDao {
+        
     public void insert(Team team) {
         // 팀 정보가 담겨있는 객체의 주소를 배열에 보관한다.
         this.teams[this.teamIndex++] = team;
@@ -18,11 +17,11 @@ public class TeamDao {
         return arr;
     }
     
-    public Team get(String name) {
+    public Task get(String name) {
         int i = this.getTeamIndex(name);
         if (i == -1)
             return null;
-        return teams[i];
+        return [i];
     }
     
     public void update(Team team) {
@@ -37,8 +36,8 @@ public class TeamDao {
             teams[i] = null;
     }
     
-    private int getTeamIndex(String name) {
-        for (int i = 0; i < this.teamIndex; i++) {
+    private int getTaskIndex(String name) {
+        for (int i = 0; i < this.; i++) {
             if (this.teams[i] == null) continue;
             if (name.equals(this.teams[i].getName().toLowerCase())) {
                 return i;
@@ -46,12 +45,4 @@ public class TeamDao {
         }
         return -1;
     }
-
 }
-
-//ver 14 - TeamController로부터 데이터 관리 기능을 분리하여 TeamDao 생성.
-
-
-
-
-

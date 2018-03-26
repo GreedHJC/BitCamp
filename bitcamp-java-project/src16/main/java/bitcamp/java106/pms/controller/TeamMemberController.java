@@ -14,9 +14,9 @@ public class TeamMemberController {
     TeamDao teamDao;
     MemberDao memberDao;
     
-    public TaskMemberController(Scanner scanner, TeamDao teamDao, MemberDao memberDao) {
+    public TeamMemberController(Scanner scanner, TeamDao teamDao, MemberDao memberDao) {
         this.keyScan = scanner;
-        this.t = teamDao;
+        this.teamDao = teamDao;
         this.memberDao = memberDao;
     }
     
