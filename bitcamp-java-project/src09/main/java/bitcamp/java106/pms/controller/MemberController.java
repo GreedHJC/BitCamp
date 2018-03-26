@@ -1,20 +1,19 @@
-// 이 클래스는 회원 관련 기능을 모아 둔 클래스이다
+// 이 클래스는 회원 관련 기능을 모두 둔 클래스이다.
 package bitcamp.java106.pms.controller;
 
-import java.util.Scanner;
 import bitcamp.java106.pms.domain.Member;
 import bitcamp.java106.pms.util.Console;
+import java.util.Scanner;
 
-public class MemberController{
-    // 이 클래스를 사용하려면 keyboard 스캐너가 있어야한다.
+public class MemberController {
+    // 이 클래스를 사용하려면 keyboard 스캐너가 있어야 한다.
     // 이 클래스를 사용하기 전에 스캐너를 설정하라!
     public static Scanner keyScan;
 
     static Member[] members = new Member[1000];
     static int memberIndex = 0;
 
-
-    public static void service(String menu, String option){
+    public static void service(String menu, String option) {
         if (menu.equals("member/add")) {
             onMemberAdd();
         } else if (menu.equals("member/list")) {
@@ -28,7 +27,8 @@ public class MemberController{
         } else {
             System.out.println("명령어가 올바르지 않습니다.");
         }
-    }    
+    }
+
     static int getMemberIndex(String id) {
         for (int i = 0; i < memberIndex; i++) {
             if (members[i] == null) continue;
@@ -38,6 +38,7 @@ public class MemberController{
         }
         return -1;
     }
+
     static void onMemberAdd() {
         System.out.println("[회원 정보 입력]");
         Member member = new Member();
@@ -54,6 +55,7 @@ public class MemberController{
         // 회원 정보가 담겨있는 객체의 주소를 배열에 보관한다.
         members[memberIndex++] = member;
     }
+
     static void onMemberList() {
         System.out.println("[회원 목록]");
         for (int i = 0; i < memberIndex; i++) {
@@ -62,6 +64,7 @@ public class MemberController{
                 members[i].id, members[i].email, members[i].password);
         }
     }
+
     static void onMemberView(String id) {
         System.out.println("[회원 정보 조회]");
         if (id == null) {
@@ -80,6 +83,7 @@ public class MemberController{
             System.out.printf("암호: %s\n", member.password);
         }
     }
+
     static void onMemberUpdate(String id) {
         System.out.println("[회원 정보 변경]");
         if (id == null) {
@@ -104,6 +108,7 @@ public class MemberController{
             System.out.println("변경하였습니다.");
         }
     }
+
     static void onMemberDelete(String id) {
         System.out.println("[회원 정보 삭제]");
         if (id == null) {
@@ -116,10 +121,11 @@ public class MemberController{
         if (i == -1) {
             System.out.println("해당 아이디의 회원이 없습니다.");
         } else {
-            if (Console.comfirm("정말 삭제하시겠습니까?")) {
+            if (Console.confirm("정말 삭제하시겠습니까?")) {
                 members[i] = null;
                 System.out.println("삭제하였습니다.");
             }
         }
     }
+    
 }

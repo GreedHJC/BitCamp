@@ -1,17 +1,19 @@
 // 팀 관련 기능을 모아 둔 클래스
 package bitcamp.java106.pms.controller;
 
-import java.util.Scanner;
 import bitcamp.java106.pms.domain.Team;
 import bitcamp.java106.pms.util.Console;
+import java.util.Scanner;
 
-public class TeamController{
-    // 이 클래스를 사용하기 전에 App 클래스에서 준비한 Scanner 객체를 keyScan 변수에 저장하라!
+public class TeamController {
+    // 이 클래스를 사용하기 전에 App 클래스에서 준비한 Scanner 객체를
+    // keyScan 변수에 저장하라!
     public static Scanner keyScan;
+
     static Team[] teams = new Team[1000];
     static int teamIndex = 0;
 
-    public static void service(String menu, String option){
+    public static void service(String menu, String option) {
         if (menu.equals("team/add")) {
             onTeamAdd();
         } else if (menu.equals("team/list")) {
@@ -37,7 +39,6 @@ public class TeamController{
         return -1;
     }
 
-    
     static void onTeamAdd() {
         System.out.println("[팀 정보 입력]");
         Team team = new Team();
@@ -136,11 +137,11 @@ public class TeamController{
         if (i == -1) {
             System.out.println("해당 이름의 팀이 없습니다.");
         } else {
-            if (Console.comfirm("정말 삭제하시겠습니까?")) {
+            if (Console.confirm("정말 삭제하시겠습니까?")) {
                 teams[i] = null;
                 System.out.println("삭제하였습니다.");
             }
         }
     }
-
+    
 }
