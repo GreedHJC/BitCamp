@@ -1,1 +1,4 @@
-애플리케이션 자바 소스를 두는 폴더
+# 변경 내역
+- Task.java 추가
+- TaskController 추가
+- App.java 변경

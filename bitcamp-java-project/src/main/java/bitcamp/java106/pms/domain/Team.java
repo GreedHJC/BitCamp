@@ -13,7 +13,7 @@ public class Team {
     private Date startDate;
     private Date endDate;
     private Member[] members = new Member[10];
-    private Task[] tasks = new Task[10];
+    
     // 사용자 정의 데이터 타입에서 메서드 정의란?
     // => 새 데이터 타입의 값을 다룰 연산자를 정의하는 것을 의미한다.
     
@@ -84,6 +84,16 @@ public class Team {
         return 0;
     }
     
+    public Member getMember(String memberId) {
+        for (int i = 0; i < this.members.length; i++) {
+            if (this.members[i] == null) continue;
+            if (this.members[i].getId().equals(memberId)) {
+                return this.members[i];
+            }
+        }
+        return null;
+    }
+    
     public boolean isExist(String memberId) {
         for (int i = 0; i < this.members.length; i++) {
             if (this.members[i] == null) continue;
@@ -93,8 +103,16 @@ public class Team {
         }
         return false;
     }
+
+    @Override
+    public String toString() {
+        return "Team [name=" + name + ", startDate=" + startDate + ", endDate=" + endDate + "]";
+    }
+   
 }
 
+// ver 17 - getMember() 메서드 추가
+//          toString() 오버라이딩
 // ver 15 - 멤버를 저장할 인스턴스 변수를 추가한다.
 //          팀 멤버 배열에 멤버 객체를 추가하고 빼는 메서드를 새로 정의한다.
 // ver 13 - 시작일, 종료일의 데이터 타입을 String에서 Date으로 변경
