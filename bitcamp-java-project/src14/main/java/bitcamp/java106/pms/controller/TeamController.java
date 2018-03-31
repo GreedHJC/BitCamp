@@ -62,11 +62,10 @@ public class TeamController {
     void onTeamList() {
         System.out.println("[팀 목록]");
         Team[] list = teamDao.list();
-        for (int i = 0; i < list.length; i++) {
-            if (list[i] == null) continue;
+        for (Team team : list) {
             System.out.printf("%s, %d, %s ~ %s\n", 
-                    list[i].name, list[i].maxQty, 
-                    list[i].startDate, list[i].endDate);
+                    team.name, team.maxQty, 
+                    team.startDate, team.endDate);
         }
     }
 

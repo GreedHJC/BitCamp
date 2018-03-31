@@ -13,7 +13,7 @@ public class MemberController {
     static Member[] members = new Member[1000];
     static int memberIndex = 0;
 
-    static int getMemberIndex(String id) {
+    public static int getMemberIndex(String id) {
         for (int i = 0; i < memberIndex; i++) {
             if (members[i] == null) continue;
             if (id.equals(members[i].id.toLowerCase())) {
