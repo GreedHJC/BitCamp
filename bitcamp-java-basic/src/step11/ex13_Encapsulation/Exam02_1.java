@@ -1,9 +1,6 @@
 // 캡슐화(encapsulation) - 접근 범위 테스트
 package step11.ex13_Encapsulation;
 
-import step11.ex13.sub.B;
-import step11.ex13.sub.C;
-
 public class Exam02_1 extends C {
     
     public static void main(String[] args) {
