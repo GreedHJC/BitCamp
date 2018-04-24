@@ -1,3 +1,14 @@
 apply plugin : 'eclipse'
 
 apply plugin : 'java'
+
+// => 의존 라이브러리를 보관하고 있는 서버를 지정한다.
+repositories {
+      mavenCentral() // https://repo.maven.apache.org/maven2/ 서버에서 다운로드 받는다.
+} 
+
+// => 다운로드할 의존 라이브러리를 지정한다.
+dependencies{
+    // MySQL JDBC Driver 라이브러리
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.11'
+}
