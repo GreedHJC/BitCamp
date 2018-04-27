@@ -48,35 +48,23 @@
   
   <insert id="insert" parameterType="Task"
           useGeneratedKeys="true" keyColumn="tano" keyProperty="no">
-    insert into pms_task(titl,sdt,edt,mid,tnm) 
-    values(#{title},#{startDate},#{endDate},#{worker.id},#{team.name})
+    insert into pms_task(titl,sdt,edt,mid,tnm) values(#{title},#{startDate},#{endDate},#{worker.id},#{team.name})
   </insert>
   
   <select id="selectOne" parameterType="int" resultMap="TaskMap">
-    select titl,sdt,edt,stat,mid,tnm 
-    from pms_task 
-    where tano=#{value}
+    select titl,sdt,edt,stat,mid,tnm from pms_task where tano=#{value}
   </select>
   
   <update id="update" parameterType="Task">
-    update pms_task set 
-      titl=#{title},
-      sdt=#{startDate},
-      edt=#{endDate},
-      mid=#{worker.id},
-      tnm=#{team.name} 
-    where tano=#{no}
+    update pms_task set titl=#{title}, sdt=#{startDate}, edt=#{endDate}, mid=#{worker.id}, tnm=#{team.name} where tano=#{no}
   </update>
   
   <delete id="delete" parameterType="int">
-    delete from pms_task 
-    where tano=#{value}
+    delete from pms_task where tano=#{value}
   </delete>
   
   <update id="updateState" parameterType="map">
-    update pms_task set 
-      stat=#{state} 
-    where tano=#{no}
+    update pms_task set stat=#{state} where tano=#{no}
   </update>
 </mapper>
 
