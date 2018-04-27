@@ -1,4 +1,4 @@
-package bitcamp.java106.pms.dao;
+package bitcamp.java106.pms.sql.dao;
 
 import java.util.ArrayList;
 import java.util.HashMap;

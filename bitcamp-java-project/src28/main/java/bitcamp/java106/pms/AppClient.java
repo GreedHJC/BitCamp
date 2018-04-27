@@ -1,5 +1,5 @@
 // AppServer에 접속할 클라이언트 만들기
-package bitcamp.java106.pms;
+package bitcamp.java106.pms.sql;
 
 import java.io.PrintStream;
 import java.net.Socket;

@@ -1,8 +1,8 @@
-package bitcamp.java106.pms;
+package bitcamp.java106.pms.sql;
 
 
-import bitcamp.java106.pms.domain.Team;
-import bitcamp.java106.pms.domain.Member;
+import bitcamp.java106.pms.sql.domain.Team;
+import bitcamp.java106.pms.sql.domain.Member;
 import java.util.Scanner;
 
 // ver 1.2 - 명령어를 잘못 입력했을 때 안내 문구를 출력한다. 

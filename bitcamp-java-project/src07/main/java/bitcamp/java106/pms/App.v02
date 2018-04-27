@@ -1,8 +1,8 @@
-package bitcamp.java106.pms;
+package bitcamp.java106.pms.sql;
 
 
-import bitcamp.java106.pms.domain.Team;
-import bitcamp.java106.pms.domain.Member;
+import bitcamp.java106.pms.sql.domain.Team;
+import bitcamp.java106.pms.sql.domain.Member;
 import java.util.Scanner;
 
 // ver 0.2 - 사용자에게 yes/no를 묻는 코드를 메서드로 분리한다.

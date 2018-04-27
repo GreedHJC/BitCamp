@@ -2,12 +2,12 @@
 // => 생성자를 통해 필수 입력 값을 반드시 설정하도록 강제시킬 수 있다.
 // => 즉 생성자란, 객체를 사용하기 전에 유효한 값으로 설정하게 만드는 문법이다.
 // 
-package bitcamp.java106.pms.controller;
+package bitcamp.java106.pms.sql.controller;
 
 import java.util.Scanner;
 
-import bitcamp.java106.pms.domain.Board;
-import bitcamp.java106.pms.util.Console;
+import bitcamp.java106.pms.sql.domain.Board;
+import bitcamp.java106.pms.sql.util.Console;
 
 public class BoardController {
     Scanner keyScan;

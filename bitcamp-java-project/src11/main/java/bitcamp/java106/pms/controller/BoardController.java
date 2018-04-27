@@ -1,10 +1,10 @@
 // 스태틱 멤버(변수 및 메서드)를 인스턴스 멤버로 변경한다. 
-package bitcamp.java106.pms.controller;
+package bitcamp.java106.pms.sql.controller;
 
 import java.util.Scanner;
 
-import bitcamp.java106.pms.domain.Board;
-import bitcamp.java106.pms.util.Console;
+import bitcamp.java106.pms.sql.domain.Board;
+import bitcamp.java106.pms.sql.util.Console;
 
 public class BoardController {
     public Scanner keyScan;

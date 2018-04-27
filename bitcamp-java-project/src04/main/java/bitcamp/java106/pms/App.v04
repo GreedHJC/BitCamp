@@ -1,7 +1,7 @@
-package bitcamp.java106.pms;
+package bitcamp.java106.pms.sql;
 
 
-import bitcamp.java106.pms.domain.Team;
+import bitcamp.java106.pms.sql.domain.Team;
 import java.util.Scanner;
 
 // ver 0.4 - quit 명령어 입력 시 반복문을 종료한다.

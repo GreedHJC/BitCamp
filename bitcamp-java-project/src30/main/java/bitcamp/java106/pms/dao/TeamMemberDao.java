@@ -1,4 +1,4 @@
-package bitcamp.java106.pms.dao;
+package bitcamp.java106.pms.sql.dao;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
-import bitcamp.java106.pms.annotation.Component;
+import bitcamp.java106.pms.sql.annotation.Component;
 
 @Component
 public class TeamMemberDao {

@@ -1,4 +1,4 @@
-package bitcamp.java106.pms.util;
+package bitcamp.java106.pms.sql.util;
 
 public class ArrayList {
     protected static final int DEFAULT_CAPACITY = 5;

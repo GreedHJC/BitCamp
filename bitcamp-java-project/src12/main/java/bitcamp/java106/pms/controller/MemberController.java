@@ -1,8 +1,8 @@
 // 이 클래스는 회원 관련 기능을 모두 둔 클래스이다.
-package bitcamp.java106.pms.controller;
+package bitcamp.java106.pms.sql.controller;
 
-import bitcamp.java106.pms.domain.Member;
-import bitcamp.java106.pms.util.Console;
+import bitcamp.java106.pms.sql.domain.Member;
+import bitcamp.java106.pms.sql.util.Console;
 import java.util.Scanner;
 
 public class MemberController {

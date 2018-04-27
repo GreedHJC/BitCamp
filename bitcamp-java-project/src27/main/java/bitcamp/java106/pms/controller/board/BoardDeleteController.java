@@ -1,12 +1,12 @@
-package bitcamp.java106.pms.controller.board;
+package bitcamp.java106.pms.sql.controller.board;
 
 import java.util.Scanner;
 
-import bitcamp.java106.pms.annotation.Component;
-import bitcamp.java106.pms.controller.Controller;
-import bitcamp.java106.pms.dao.BoardDao;
-import bitcamp.java106.pms.domain.Board;
-import bitcamp.java106.pms.util.Console;
+import bitcamp.java106.pms.sql.annotation.Component;
+import bitcamp.java106.pms.sql.controller.Controller;
+import bitcamp.java106.pms.sql.dao.BoardDao;
+import bitcamp.java106.pms.sql.domain.Board;
+import bitcamp.java106.pms.sql.util.Console;
 
 @Component("board/delete")
 public class BoardDeleteController implements Controller {

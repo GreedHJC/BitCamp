@@ -1,13 +1,13 @@
 // Controller 규칙에 따라 메서드 작성
-package bitcamp.java106.pms.controller.classroom;
+package bitcamp.java106.pms.sql.controller.classroom;
 
 import java.util.Scanner;
 
-import bitcamp.java106.pms.annotation.Component;
-import bitcamp.java106.pms.controller.Controller;
-import bitcamp.java106.pms.dao.ClassroomDao;
-import bitcamp.java106.pms.domain.Classroom;
-import bitcamp.java106.pms.util.Console;
+import bitcamp.java106.pms.sql.annotation.Component;
+import bitcamp.java106.pms.sql.controller.Controller;
+import bitcamp.java106.pms.sql.dao.ClassroomDao;
+import bitcamp.java106.pms.sql.domain.Classroom;
+import bitcamp.java106.pms.sql.util.Console;
 
 @Component("classroom/delete")
 public class ClassroomDeleteController implements Controller {

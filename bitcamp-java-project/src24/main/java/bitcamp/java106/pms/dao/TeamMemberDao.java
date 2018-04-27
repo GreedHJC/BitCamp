@@ -1,4 +1,4 @@
-package bitcamp.java106.pms.dao;
+package bitcamp.java106.pms.sql.dao;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
-import bitcamp.java106.pms.annotation.Component;
+import bitcamp.java106.pms.sql.annotation.Component;
 
 @Component
 public class TeamMemberDao {

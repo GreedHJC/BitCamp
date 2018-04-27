@@ -1,8 +1,8 @@
-package bitcamp.java106.pms.dao;
+package bitcamp.java106.pms.sql.dao;
 
 import java.util.LinkedList;
 
-import bitcamp.java106.pms.domain.Member;
+import bitcamp.java106.pms.sql.domain.Member;
 
 public class MemberDao {
     

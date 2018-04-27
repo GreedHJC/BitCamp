@@ -1,16 +1,16 @@
 // 팀 작업 관리 기능을 모아 둔 클래스
-package bitcamp.java106.pms.controller;
+package bitcamp.java106.pms.sql.controller;
 
 import java.sql.Date;
 import java.util.Scanner;
 
-import bitcamp.java106.pms.dao.MemberDao;
-import bitcamp.java106.pms.dao.TaskDao;
-import bitcamp.java106.pms.dao.TeamDao;
-import bitcamp.java106.pms.dao.TeamMemberDao;
-import bitcamp.java106.pms.domain.Task;
-import bitcamp.java106.pms.domain.Team;
-import bitcamp.java106.pms.util.Console;
+import bitcamp.java106.pms.sql.dao.MemberDao;
+import bitcamp.java106.pms.sql.dao.TaskDao;
+import bitcamp.java106.pms.sql.dao.TeamDao;
+import bitcamp.java106.pms.sql.dao.TeamMemberDao;
+import bitcamp.java106.pms.sql.domain.Task;
+import bitcamp.java106.pms.sql.domain.Team;
+import bitcamp.java106.pms.sql.util.Console;
 
 public class TaskController {
     

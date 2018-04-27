@@ -1,10 +1,10 @@
-package bitcamp.java106.pms.controller;
+package bitcamp.java106.pms.sql.controller;
 
 import java.sql.Date;
 import java.util.Scanner;
 
-import bitcamp.java106.pms.domain.Board;
-import bitcamp.java106.pms.util.Console;
+import bitcamp.java106.pms.sql.domain.Board;
+import bitcamp.java106.pms.sql.util.Console;
 
 public class BoardController {
     Scanner keyScan;

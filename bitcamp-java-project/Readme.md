@@ -97,7 +97,7 @@
 - 작업내용
     - 수업 정보의 등록/조회/변경/삭제할 수 있는 기능을 만든다.
 ```
-> java -classpath bin bitcamp.java106.pms.App
+> java -classpath bin bitcamp.java106.pms.sql.App
 명령> classroom/add
 [수업 등록]
 수업명? 자바106기
@@ -165,7 +165,7 @@
     - Team 클래스에서 팀 회원 관리 기능을 TeamMemberDao로 분리한다.
       이렇게 함으로써 Team 클래스가 좀 더 "high cohesion"을 유지하게 만든다.
 ```
-> java -classpath bin bitcamp.java106.pms.App
+> java -classpath bin bitcamp.java106.pms.sql.App
 명령> team/add
 팀명? 비트비트
 ...
@@ -247,7 +247,7 @@
 - 작업내용
     - 팀 멤버를 관리하는 기능을 추가한다.
 ```
-> java -classpath bin bitcamp.java106.pms.App
+> java -classpath bin bitcamp.java106.pms.sql.App
 명령> team/add
 팀명? 비트비트
 ...
@@ -331,7 +331,7 @@ lee 회원은 없습니다.
 - 작업내용
   - 게시판 데이터를 등록, 조회, 변경, 삭제하는 기능을 추가한다.
 ```
-> java -classpath bin bitcamp.java106.pms.App
+> java -classpath bin bitcamp.java106.pms.sql.App
 명령> board/add
 [게시글 등록]
 제목? 제목1
@@ -408,7 +408,7 @@ lee 회원은 없습니다.
   - 회원 정보 변경 및 삭제 기능을 추가한다.
 - 실행 결과
 ```
-> java -classpath bin bitcamp.java106.pms.App
+> java -classpath bin bitcamp.java106.pms.sql.App
 명령> team/update okok
 해당 이름의 팀이 없습니다.
 
@@ -451,7 +451,7 @@ lee 회원은 없습니다.
   - 사용자의 명령에 따라 팀 또는 회원 정보를 출력한다.
 - 실행결과
 ```
-> java -classpath bin bitcamp.java106.pms.App
+> java -classpath bin bitcamp.java106.pms.sql.App
 명령> (사용자을 입력을 기다리고 있어야 한다.)
 명령> help
 팀 등록 명령 : team/add
@@ -539,7 +539,7 @@ leem, leem@test.com, 1111
   - 5개를 넘으면 바로 출력한다.
 - 실행 결과
 ```
-> java -classpath bin bitcamp.java106.pms.App
+> java -classpath bin bitcamp.java106.pms.sql.App
 팀명? 비트비트
 설명? 자바 프로젝트 팀
 최대인원? 5
@@ -572,7 +572,7 @@ leem, leem@test.com, 1111
   - 사용자로부터 팀 정보를 입력 받아 출력하라.
 - 실행 결과
 ```
-> java -classpath bin bitcamp.java106.pms.App
+> java -classpath bin bitcamp.java106.pms.sql.App
 팀명? 비트비트
 설명? 자바 프로젝트 팀
 최대인원? 5

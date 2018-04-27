@@ -1,12 +1,12 @@
 // 팀 멤버 관리 기능을 모아 둔 클래스
-package bitcamp.java106.pms.controller;
+package bitcamp.java106.pms.sql.controller;
 
 import java.util.Scanner;
 
-import bitcamp.java106.pms.dao.MemberDao;
-import bitcamp.java106.pms.dao.TeamDao;
-import bitcamp.java106.pms.domain.Member;
-import bitcamp.java106.pms.domain.Team;
+import bitcamp.java106.pms.sql.dao.MemberDao;
+import bitcamp.java106.pms.sql.dao.TeamDao;
+import bitcamp.java106.pms.sql.domain.Member;
+import bitcamp.java106.pms.sql.domain.Team;
 
 public class TeamMemberController {
     

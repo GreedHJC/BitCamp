@@ -1,6 +1,6 @@
-package bitcamp.java106.pms;
+package bitcamp.java106.pms.sql;
 
-import bitcamp.java106.pms.server.ServerRequest;
+import bitcamp.java106.pms.sql.server.ServerRequest;
 
 public class Test {
     

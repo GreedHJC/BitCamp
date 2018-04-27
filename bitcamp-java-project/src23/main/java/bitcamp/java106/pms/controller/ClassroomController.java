@@ -1,14 +1,14 @@
 // Controller 규칙에 따라 메서드 작성
-package bitcamp.java106.pms.controller;
+package bitcamp.java106.pms.sql.controller;
 
 import java.sql.Date;
 import java.util.Iterator;
 import java.util.Scanner;
 
-import bitcamp.java106.pms.annotation.Component;
-import bitcamp.java106.pms.dao.ClassroomDao;
-import bitcamp.java106.pms.domain.Classroom;
-import bitcamp.java106.pms.util.Console;
+import bitcamp.java106.pms.sql.annotation.Component;
+import bitcamp.java106.pms.sql.dao.ClassroomDao;
+import bitcamp.java106.pms.sql.domain.Classroom;
+import bitcamp.java106.pms.sql.util.Console;
 
 @Component("classroom")
 public class ClassroomController implements Controller {

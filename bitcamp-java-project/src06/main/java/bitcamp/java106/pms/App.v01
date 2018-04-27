@@ -1,8 +1,8 @@
-package bitcamp.java106.pms;
+package bitcamp.java106.pms.sql;
 
 
-import bitcamp.java106.pms.domain.Team;
-import bitcamp.java106.pms.domain.Member;
+import bitcamp.java106.pms.sql.domain.Team;
+import bitcamp.java106.pms.sql.domain.Member;
 import java.util.Scanner;
 
 // ver 0.1 - 팀 변경, 회원 변경 기능 추가

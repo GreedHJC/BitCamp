@@ -1,4 +1,4 @@
-package bitcamp.java106.pms.dao;
+package bitcamp.java106.pms.sql.dao;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -7,8 +7,8 @@ import java.sql.Date;
 import java.util.Iterator;
 import java.util.Scanner;
 
-import bitcamp.java106.pms.annotation.Component;
-import bitcamp.java106.pms.domain.Team;
+import bitcamp.java106.pms.sql.annotation.Component;
+import bitcamp.java106.pms.sql.domain.Team;
 
 @Component
 public class TeamDao extends AbstractDao<Team> {

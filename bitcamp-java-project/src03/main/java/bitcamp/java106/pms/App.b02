@@ -1,10 +1,10 @@
-package bitcamp.java106.pms;
+package bitcamp.java106.pms.sql;
 
 // 컴파일러에게 클래스의 위치 정보를 알려준다.
 // => 컴파일한 후 import 명령은 제거된다.
 //    즉 .class 파일에 포함되지 않는다.
 // => 그러니 import 문장이 많으면 .class 파일이 커지지 않을까 걱정말라!
-import bitcamp.java106.pms.domain.Team;
+import bitcamp.java106.pms.sql.domain.Team;
 import java.util.Scanner;
 
 // 2단계: 배열 적용

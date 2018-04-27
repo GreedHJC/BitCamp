@@ -1,5 +1,5 @@
 // App과 컨트롤러 사이에 호출 규칙
-package bitcamp.java106.pms.controller;
+package bitcamp.java106.pms.sql.controller;
 
 public interface Controller {
     // 규칙1:

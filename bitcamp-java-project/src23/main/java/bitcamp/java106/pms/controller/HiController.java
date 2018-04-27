@@ -1,9 +1,9 @@
 // Controller 규칙에 따라 메서드 작성
-package bitcamp.java106.pms.controller;
+package bitcamp.java106.pms.sql.controller;
 
 import java.util.Scanner;
 
-import bitcamp.java106.pms.annotation.Component;
+import bitcamp.java106.pms.sql.annotation.Component;
 
 @Component("hi")
 public class HiController implements Controller {

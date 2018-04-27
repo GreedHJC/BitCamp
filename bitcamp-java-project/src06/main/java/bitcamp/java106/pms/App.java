@@ -1,8 +1,8 @@
-package bitcamp.java106.pms;
+package bitcamp.java106.pms.sql;
 
 
-import bitcamp.java106.pms.domain.Team;
-import bitcamp.java106.pms.domain.Member;
+import bitcamp.java106.pms.sql.domain.Team;
+import bitcamp.java106.pms.sql.domain.Member;
 import java.util.Scanner;
 
 // ver 0.2 - 팀 삭제, 회원 삭제 기능 추가

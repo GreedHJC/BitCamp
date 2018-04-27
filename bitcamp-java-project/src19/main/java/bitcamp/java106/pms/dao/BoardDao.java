@@ -1,8 +1,8 @@
-package bitcamp.java106.pms.dao;
+package bitcamp.java106.pms.sql.dao;
 
 import java.util.LinkedList;
 
-import bitcamp.java106.pms.domain.Board;
+import bitcamp.java106.pms.sql.domain.Board;
 
 public class BoardDao {
     private LinkedList<Board> collection = new LinkedList<>();

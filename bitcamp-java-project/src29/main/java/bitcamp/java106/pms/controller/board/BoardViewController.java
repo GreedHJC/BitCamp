@@ -1,14 +1,14 @@
 // Controller 규칙에 따라 메서드 작성
-package bitcamp.java106.pms.controller.board;
+package bitcamp.java106.pms.sql.controller.board;
 
 import java.io.PrintWriter;
 
-import bitcamp.java106.pms.annotation.Component;
-import bitcamp.java106.pms.controller.Controller;
-import bitcamp.java106.pms.dao.BoardDao;
-import bitcamp.java106.pms.domain.Board;
-import bitcamp.java106.pms.server.ServerRequest;
-import bitcamp.java106.pms.server.ServerResponse;
+import bitcamp.java106.pms.sql.annotation.Component;
+import bitcamp.java106.pms.sql.controller.Controller;
+import bitcamp.java106.pms.sql.dao.BoardDao;
+import bitcamp.java106.pms.sql.domain.Board;
+import bitcamp.java106.pms.sql.server.ServerRequest;
+import bitcamp.java106.pms.sql.server.ServerResponse;
 
 @Component("/board/view")
 public class BoardViewController implements Controller {

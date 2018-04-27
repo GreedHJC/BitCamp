@@ -1,17 +1,17 @@
-package bitcamp.java106.pms;
+package bitcamp.java106.pms.sql;
 
 import java.util.HashMap;
 import java.util.Scanner;
 
-import bitcamp.java106.pms.context.ApplicationContext;
-import bitcamp.java106.pms.controller.Controller;
-import bitcamp.java106.pms.dao.BoardDao;
-import bitcamp.java106.pms.dao.ClassroomDao;
-import bitcamp.java106.pms.dao.MemberDao;
-import bitcamp.java106.pms.dao.TaskDao;
-import bitcamp.java106.pms.dao.TeamDao;
-import bitcamp.java106.pms.dao.TeamMemberDao;
-import bitcamp.java106.pms.util.Console;
+import bitcamp.java106.pms.sql.context.ApplicationContext;
+import bitcamp.java106.pms.sql.controller.Controller;
+import bitcamp.java106.pms.sql.dao.BoardDao;
+import bitcamp.java106.pms.sql.dao.ClassroomDao;
+import bitcamp.java106.pms.sql.dao.MemberDao;
+import bitcamp.java106.pms.sql.dao.TaskDao;
+import bitcamp.java106.pms.sql.dao.TeamDao;
+import bitcamp.java106.pms.sql.dao.TeamMemberDao;
+import bitcamp.java106.pms.sql.util.Console;
 
 public class App {
     
@@ -69,7 +69,7 @@ public class App {
         
         // 기본 객체와 함께 @Component가 붙은 클래스의 객체를 준비한다.
         iocContainer = new ApplicationContext(
-                "bitcamp.java106.pms", defaultBeans);
+                "bitcamp.java106.pms.sql", defaultBeans);
         
         Console.keyScan = keyScan;
 

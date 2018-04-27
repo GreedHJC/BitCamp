@@ -1,6 +1,6 @@
-package bitcamp.java106.pms.dao;
+package bitcamp.java106.pms.sql.dao;
 
-import bitcamp.java106.pms.domain.Board;
+import bitcamp.java106.pms.sql.domain.Board;
 
 public class BoardDao {
     Board[] boards = new Board[1000];

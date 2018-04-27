@@ -1,6 +1,6 @@
-package bitcamp.java106.pms.dao;
+package bitcamp.java106.pms.sql.dao;
 
-import bitcamp.java106.pms.domain.Task;
+import bitcamp.java106.pms.sql.domain.Task;
 
 public class TaskDao {
     Task[] tasks = new Task[1000];

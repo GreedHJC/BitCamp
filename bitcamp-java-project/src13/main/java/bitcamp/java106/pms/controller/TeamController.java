@@ -1,8 +1,8 @@
 // 팀 관련 기능을 모아 둔 클래스
-package bitcamp.java106.pms.controller;
+package bitcamp.java106.pms.sql.controller;
 
-import bitcamp.java106.pms.domain.Team;
-import bitcamp.java106.pms.util.Console;
+import bitcamp.java106.pms.sql.domain.Team;
+import bitcamp.java106.pms.sql.util.Console;
 
 import java.sql.Date;
 import java.util.Scanner;

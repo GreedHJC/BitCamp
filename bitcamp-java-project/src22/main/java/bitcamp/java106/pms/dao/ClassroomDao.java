@@ -1,6 +1,6 @@
-package bitcamp.java106.pms.dao;
+package bitcamp.java106.pms.sql.dao;
 
-import bitcamp.java106.pms.domain.Classroom;
+import bitcamp.java106.pms.sql.domain.Classroom;
 
 public class ClassroomDao extends AbstractDao<Classroom> {
     

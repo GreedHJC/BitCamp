@@ -1,119 +1,67 @@
 package bitcamp.java106.pms.dao;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
 
 import bitcamp.java106.pms.annotation.Component;
 import bitcamp.java106.pms.domain.Board;
 
 @Component
 public class BoardDao {
-    public int delete(int no) throws Exception {
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        try (
-            Connection con = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/java106db?serverTimezone=UTC&useSSL=false",
-                "java106", "1111");
-            PreparedStatement stmt = con.prepareStatement(
-                "delete from pms_board where bno=?");) {
-            
-            stmt.setInt(1, no);
-            return stmt.executeUpdate();
-        } 
+    
+    SqlSessionFactory sqlSessionFactory;
+    
+    public BoardDao(SqlSessionFactory sqlSessionFactory) {
+        this.sqlSessionFactory = sqlSessionFactory;
     }
     
-    public List<Board> list() throws Exception {
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        try (
-            Connection con = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/java106db?serverTimezone=UTC&useSSL=false",
-                "java106", "1111");
-            PreparedStatement stmt = con.prepareStatement(
-                "select bno,titl,cdt from pms_board");
-            ResultSet rs = stmt.executeQuery();) {
-            
-            ArrayList<Board> arr = new ArrayList<>();
-            while (rs.next()) {
-                Board board = new Board();
-                board.setNo(rs.getInt("bno"));
-                board.setTitle(rs.getString("titl"));
-                board.setCreatedDate(rs.getDate("cdt"));
-                arr.add(board);
-            }
-            return arr;
+    public int delete(int no) throws Exception {
+        try (SqlSession sqlSession = this.sqlSessionFactory.openSession()) {
+            int count = sqlSession.delete(
+                    "bitcamp.java106.pms.dao.BoardDao.delete", no);
+            sqlSession.commit();
+            return count;
+        }
+    }
+    
+    public List<Board> selectList() throws Exception {
+        try (SqlSession sqlSession = this.sqlSessionFactory.openSession()) {
+            return sqlSession.selectList(
+                    "bitcamp.java106.pms.dao.BoardDao.selectList");
         }
     }
 
     public int insert(Board board) throws Exception {
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        try (
-            Connection con = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/java106db?serverTimezone=UTC&useSSL=false",
-                "java106", "1111");
-            PreparedStatement stmt = con.prepareStatement(
-                "insert into pms_board(titl,cont,cdt) values(?,?,now())");) {
-            
-            stmt.setString(1, board.getTitle());
-            stmt.setString(2, board.getContent());
-        
-            return stmt.executeUpdate();
+        try (SqlSession sqlSession = this.sqlSessionFactory.openSession()) {
+            int count = sqlSession.insert(
+                    "bitcamp.java106.pms.dao.BoardDao.insert", board);
+            sqlSession.commit();
+            return count;
         }
     }
 
     public int update(Board board) throws Exception {
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        try (
-            Connection con = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/java106db?serverTimezone=UTC&useSSL=false",
-                "java106", "1111");
-            PreparedStatement stmt = con.prepareStatement(
-                "update pms_board set titl=?, cont=?, cdt=now() where bno=?");) {
-            
-            stmt.setString(1, board.getTitle());
-            stmt.setString(2, board.getContent());
-            stmt.setInt(3, board.getNo());
-            return stmt.executeUpdate();
+        try (SqlSession sqlSession = this.sqlSessionFactory.openSession()) {
+            int count = sqlSession.update(
+                    "bitcamp.java106.pms.dao.BoardDao.update", board);
+            sqlSession.commit();
+            return count;
         }
     }
 
-    public Board view(String no) throws Exception {
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        try (
-            Connection con = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/java106db?serverTimezone=UTC&useSSL=false",
-                "java106", "1111");
-            PreparedStatement stmt = con.prepareStatement(
-                "select bno,titl,cont,cdt from pms_board where bno=?");) {
-            
-            stmt.setString(1, no);
-            
-            try (ResultSet rs = stmt.executeQuery();) {
-                if (!rs.next()) 
-                    return null;
-                
-                Board board = new Board();
-                board.setNo(rs.getInt("bno"));
-                board.setTitle(rs.getString("titl"));
-                board.setContent(rs.getString("cont"));
-                board.setCreatedDate(rs.getDate("cdt"));
-                return board;
-            }
-        }
+    public Board selectOne(int no) throws Exception {
+        try (SqlSession sqlSession = this.sqlSessionFactory.openSession()) {
+            return sqlSession.selectOne(
+                    "bitcamp.java106.pms.dao.BoardDao.selectOne", no);
+        }  
     }
 }
 
-//ver 31 - 
+//ver 33 - Mybatis 적용 
+//ver 32 - DB 커넥션 풀 적용
+//ver 31 - JDBC API 적용
 //ver 24 - File I/O 적용
 //ver 23 - @Component 애노테이션을 붙인다.
 //ver 22 - 추상 클래스 AbstractDao를 상속 받는다.
@@ -121,6 +69,7 @@ public class BoardDao {
 //ver 18 - ArrayList를 이용하여 인스턴스(의 주소) 목록을 다룬다. 
 // ver 16 - 인스턴스 변수를 직접 사용하는 대신 겟터, 셋터 사용.
 // ver 14 - BoardController로부터 데이터 관리 기능을 분리하여 BoardDao 생성.
+
 
 
 

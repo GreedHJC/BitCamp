@@ -1,24 +1,24 @@
-package bitcamp.java106.pms;
+package bitcamp.java106.pms.sql;
 
 import java.sql.Date;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import bitcamp.java106.pms.context.ApplicationContext;
-import bitcamp.java106.pms.controller.BoardController;
-import bitcamp.java106.pms.controller.ClassroomController;
-import bitcamp.java106.pms.controller.Controller;
-import bitcamp.java106.pms.controller.MemberController;
-import bitcamp.java106.pms.controller.TaskController;
-import bitcamp.java106.pms.controller.TeamController;
-import bitcamp.java106.pms.controller.TeamMemberController;
-import bitcamp.java106.pms.dao.MemberDao;
-import bitcamp.java106.pms.dao.TaskDao;
-import bitcamp.java106.pms.dao.TeamDao;
-import bitcamp.java106.pms.dao.TeamMemberDao;
-import bitcamp.java106.pms.domain.Member;
-import bitcamp.java106.pms.domain.Team;
-import bitcamp.java106.pms.util.Console;
+import bitcamp.java106.pms.sql.context.ApplicationContext;
+import bitcamp.java106.pms.sql.controller.BoardController;
+import bitcamp.java106.pms.sql.controller.ClassroomController;
+import bitcamp.java106.pms.sql.controller.Controller;
+import bitcamp.java106.pms.sql.controller.MemberController;
+import bitcamp.java106.pms.sql.controller.TaskController;
+import bitcamp.java106.pms.sql.controller.TeamController;
+import bitcamp.java106.pms.sql.controller.TeamMemberController;
+import bitcamp.java106.pms.sql.dao.MemberDao;
+import bitcamp.java106.pms.sql.dao.TaskDao;
+import bitcamp.java106.pms.sql.dao.TeamDao;
+import bitcamp.java106.pms.sql.dao.TeamMemberDao;
+import bitcamp.java106.pms.sql.domain.Member;
+import bitcamp.java106.pms.sql.domain.Team;
+import bitcamp.java106.pms.sql.util.Console;
 
 public class App {
     
@@ -50,7 +50,7 @@ public class App {
         
         // 기본 객체와 함께 @Component가 붙은 클래스의 객체를 준비한다.
         iocContainer = new ApplicationContext(
-                "bitcamp.java106.pms", defaultBeans);
+                "bitcamp.java106.pms.sql", defaultBeans);
         
         // 테스트용 데이터를 준비한다. 
         prepareMemberData();
@@ -92,7 +92,7 @@ public class App {
     }
     static void prepareMemberData() {
         MemberDao memberDao = (MemberDao) iocContainer.getBean(
-                "bitcamp.java106.pms.dao.MemberDao");
+                "bitcamp.java106.pms.sql.dao.MemberDao");
         
         Member member = new Member();
         member.setId("aaa");
@@ -133,9 +133,9 @@ public class App {
     static void prepareTeamData() {
         
         TeamDao teamDao = (TeamDao) iocContainer.getBean(
-                "bitcamp.java106.pms.dao.TeamDao");
+                "bitcamp.java106.pms.sql.dao.TeamDao");
         TeamMemberDao teamMemberDao = (TeamMemberDao) iocContainer.getBean(
-                "bitcamp.java106.pms.dao.TeamMemberDao");
+                "bitcamp.java106.pms.sql.dao.TeamMemberDao");
         
         Team team = new Team();
         team.setName("t1");

@@ -1,13 +1,13 @@
 // Controller 규칙에 따라 메서드 작성
-package bitcamp.java106.pms.controller;
+package bitcamp.java106.pms.sql.controller;
 
 import java.sql.Date;
 import java.util.Iterator;
 import java.util.Scanner;
 
-import bitcamp.java106.pms.dao.TeamDao;
-import bitcamp.java106.pms.domain.Team;
-import bitcamp.java106.pms.util.Console;
+import bitcamp.java106.pms.sql.dao.TeamDao;
+import bitcamp.java106.pms.sql.domain.Team;
+import bitcamp.java106.pms.sql.util.Console;
 
 //TeamController는 Controller 규칙을 이행한다.
 //=> Controller 규칙에 따라 메서드를 만든다.

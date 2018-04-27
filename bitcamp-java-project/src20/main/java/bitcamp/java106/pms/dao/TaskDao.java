@@ -1,8 +1,8 @@
-package bitcamp.java106.pms.dao;
+package bitcamp.java106.pms.sql.dao;
 
 import java.util.LinkedList;
 
-import bitcamp.java106.pms.domain.Task;
+import bitcamp.java106.pms.sql.domain.Task;
 
 public class TaskDao {
     private LinkedList<Task> collection = new LinkedList<Task>();

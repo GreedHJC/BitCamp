@@ -1,5 +1,5 @@
 // HTTP 프로토콜에 따라 요청을 처리할 서버
-package bitcamp.java106.pms;
+package bitcamp.java106.pms.sql;
 
 import java.io.PrintWriter;
 import java.net.ServerSocket;

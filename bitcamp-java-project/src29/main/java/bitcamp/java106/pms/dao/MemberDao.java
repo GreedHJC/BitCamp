@@ -1,4 +1,4 @@
-package bitcamp.java106.pms.dao;
+package bitcamp.java106.pms.sql.dao;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -8,8 +8,8 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Iterator;
 
-import bitcamp.java106.pms.annotation.Component;
-import bitcamp.java106.pms.domain.Member;
+import bitcamp.java106.pms.sql.annotation.Component;
+import bitcamp.java106.pms.sql.domain.Member;
 
 @Component
 public class MemberDao extends AbstractDao<Member> {

@@ -1,7 +1,7 @@
-package bitcamp.java106.pms.dao;
+package bitcamp.java106.pms.sql.dao;
 
-import bitcamp.java106.pms.domain.Team;
-import bitcamp.java106.pms.util.ArrayList;
+import bitcamp.java106.pms.sql.domain.Team;
+import bitcamp.java106.pms.sql.util.ArrayList;
 
 public class TeamDao {
     

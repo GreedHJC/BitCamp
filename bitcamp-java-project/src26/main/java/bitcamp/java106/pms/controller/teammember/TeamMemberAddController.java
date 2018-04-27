@@ -1,15 +1,15 @@
 // Controller 규칙에 따라 메서드 작성
-package bitcamp.java106.pms.controller.teammember;
+package bitcamp.java106.pms.sql.controller.teammember;
 
 import java.util.Scanner;
 
-import bitcamp.java106.pms.annotation.Component;
-import bitcamp.java106.pms.controller.Controller;
-import bitcamp.java106.pms.dao.MemberDao;
-import bitcamp.java106.pms.dao.TeamDao;
-import bitcamp.java106.pms.dao.TeamMemberDao;
-import bitcamp.java106.pms.domain.Member;
-import bitcamp.java106.pms.domain.Team;
+import bitcamp.java106.pms.sql.annotation.Component;
+import bitcamp.java106.pms.sql.controller.Controller;
+import bitcamp.java106.pms.sql.dao.MemberDao;
+import bitcamp.java106.pms.sql.dao.TeamDao;
+import bitcamp.java106.pms.sql.dao.TeamMemberDao;
+import bitcamp.java106.pms.sql.domain.Member;
+import bitcamp.java106.pms.sql.domain.Team;
 
 @Component("team/member/add")
 public class TeamMemberAddController implements Controller {

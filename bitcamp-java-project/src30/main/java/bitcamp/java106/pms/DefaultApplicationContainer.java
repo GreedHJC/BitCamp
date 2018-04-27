@@ -1,13 +1,13 @@
 // ApplicationContainer 구현체
-package bitcamp.java106.pms;
+package bitcamp.java106.pms.sql;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-import bitcamp.java106.pms.context.ApplicationContext;
-import bitcamp.java106.pms.controller.Controller;
-import bitcamp.java106.pms.server.ServerRequest;
-import bitcamp.java106.pms.server.ServerResponse;
+import bitcamp.java106.pms.sql.context.ApplicationContext;
+import bitcamp.java106.pms.sql.controller.Controller;
+import bitcamp.java106.pms.sql.server.ServerRequest;
+import bitcamp.java106.pms.sql.server.ServerResponse;
 
 public class DefaultApplicationContainer implements ApplicationContainer {
     
@@ -15,7 +15,7 @@ public class DefaultApplicationContainer implements ApplicationContainer {
     
     public DefaultApplicationContainer() throws Exception {
         //=> 컨트롤러, DAO 등 클라이언트 요청을 처리하는 객체를 자동 생성한다.
-        iocContainer = new ApplicationContext("bitcamp.java106.pms");
+        iocContainer = new ApplicationContext("bitcamp.java106.pms.sql");
     }
     
     @Override

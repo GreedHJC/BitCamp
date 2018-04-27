@@ -1,14 +1,14 @@
-package bitcamp.java106.pms;
+package bitcamp.java106.pms.sql;
 
 import java.util.Scanner;
 
-import bitcamp.java106.pms.controller.BoardController;
-import bitcamp.java106.pms.controller.MemberController;
-import bitcamp.java106.pms.controller.TeamController;
-import bitcamp.java106.pms.controller.TeamMemberController;
-import bitcamp.java106.pms.dao.MemberDao;
-import bitcamp.java106.pms.dao.TeamDao;
-import bitcamp.java106.pms.util.Console;
+import bitcamp.java106.pms.sql.controller.BoardController;
+import bitcamp.java106.pms.sql.controller.MemberController;
+import bitcamp.java106.pms.sql.controller.TeamController;
+import bitcamp.java106.pms.sql.controller.TeamMemberController;
+import bitcamp.java106.pms.sql.dao.MemberDao;
+import bitcamp.java106.pms.sql.dao.TeamDao;
+import bitcamp.java106.pms.sql.util.Console;
 
 public class App {
     static Scanner keyScan = new Scanner(System.in);

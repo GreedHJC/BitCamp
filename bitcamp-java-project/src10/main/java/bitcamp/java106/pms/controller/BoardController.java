@@ -1,10 +1,10 @@
 // 게시판 관련 기능을 모아 둔 클래스
-package bitcamp.java106.pms.controller;
+package bitcamp.java106.pms.sql.controller;
 
 import java.util.Scanner;
 
-import bitcamp.java106.pms.domain.Board;
-import bitcamp.java106.pms.util.Console;
+import bitcamp.java106.pms.sql.domain.Board;
+import bitcamp.java106.pms.sql.util.Console;
 
 public class BoardController {
     // 이 클래스를 사용하기 전에 App 클래스에서 준비한 Scanner 객체를

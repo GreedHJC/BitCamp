@@ -1,4 +1,4 @@
-package bitcamp.java106.pms.dao;
+package bitcamp.java106.pms.sql.dao;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -9,8 +9,8 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import bitcamp.java106.pms.annotation.Component;
-import bitcamp.java106.pms.domain.Task;
+import bitcamp.java106.pms.sql.annotation.Component;
+import bitcamp.java106.pms.sql.domain.Task;
 
 @Component
 public class TaskDao extends AbstractDao<Task> {

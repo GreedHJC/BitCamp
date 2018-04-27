@@ -1,15 +1,15 @@
 // Controller 규칙에 따라 메서드 작성
-package bitcamp.java106.pms.controller.team;
+package bitcamp.java106.pms.sql.controller.team;
 
 import java.io.PrintWriter;
 import java.util.Iterator;
 
-import bitcamp.java106.pms.annotation.Component;
-import bitcamp.java106.pms.controller.Controller;
-import bitcamp.java106.pms.dao.TeamDao;
-import bitcamp.java106.pms.domain.Team;
-import bitcamp.java106.pms.server.ServerRequest;
-import bitcamp.java106.pms.server.ServerResponse;
+import bitcamp.java106.pms.sql.annotation.Component;
+import bitcamp.java106.pms.sql.controller.Controller;
+import bitcamp.java106.pms.sql.dao.TeamDao;
+import bitcamp.java106.pms.sql.domain.Team;
+import bitcamp.java106.pms.sql.server.ServerRequest;
+import bitcamp.java106.pms.sql.server.ServerResponse;
 
 @Component("/team/list")
 public class TeamListController implements Controller {

@@ -1,5 +1,5 @@
 // 역할: 응답에 관련된 도구를 다룬다.
-package bitcamp.java106.pms.server;
+package bitcamp.java106.pms.sql.server;
 
 import java.io.PrintWriter;
 

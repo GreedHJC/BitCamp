@@ -1,9 +1,9 @@
-package bitcamp.java106.pms.dao;
+package bitcamp.java106.pms.sql.dao;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import bitcamp.java106.pms.domain.Task;
+import bitcamp.java106.pms.sql.domain.Task;
 
 public class TaskDao extends AbstractDao<Task> {
     

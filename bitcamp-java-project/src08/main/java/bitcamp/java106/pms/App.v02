@@ -1,8 +1,8 @@
-package bitcamp.java106.pms;
+package bitcamp.java106.pms.sql;
 
-import bitcamp.java106.pms.controller.TeamController;
-import bitcamp.java106.pms.controller.MemberController;
-import bitcamp.java106.pms.util.Console;
+import bitcamp.java106.pms.sql.controller.TeamController;
+import bitcamp.java106.pms.sql.controller.MemberController;
+import bitcamp.java106.pms.sql.util.Console;
 import java.util.Scanner;
 
 // ver 0.2 - 회원 관리 기능을 별도의 클래스로 옮긴다.
