@@ -50,10 +50,3 @@
     delete from pms_board where bno=#{value}
   </delete>
 </mapper>
-
-
-
-
-
-
-

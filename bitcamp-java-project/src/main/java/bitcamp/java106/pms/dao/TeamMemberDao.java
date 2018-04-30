@@ -23,8 +23,7 @@ public class TeamMemberDao {
             paramMap.put("teamName", teamName);
             paramMap.put("memberId", memberId);
             
-            int count = sqlSession.insert(
-                    "bitcamp.java106.pms.dao.TeamMemberDao.insert", paramMap);
+            int count = sqlSession.insert( "bitcamp.java106.pms.dao.TeamMemberDao.insert", paramMap);
             sqlSession.commit();
             return count;
         }
