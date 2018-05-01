@@ -12,7 +12,7 @@ insert into room(rno, loc, name, qnty) values(8, '서초', '302', 30);
 insert into room(rno, loc, name, qnty) values(9, '서초', '501', 30);
 insert into room(rno, loc, name, qnty) values(10, '서초', '601', 30);
 
-/* 학생 데이터 입력 */
+/* 멤버 데이터 입력 */
 insert into memb(mno, name, tel, email, pwd)
 values(100, 's100', '111-1111', 's100@', sha2('1111',224));
 insert into memb(mno, name, tel, email, pwd)
@@ -35,7 +35,7 @@ values(103, 'Y', '1003', '우리은행');
 insert into stnt(mno, work, acc_no, bank)
 values(104, 'N', '1004', '국민은행');
 
-/* 강사 데이터 입력 */
+/* 멤버 데이터 입력 */
 insert into memb(mno, name, tel, email, pwd)
 values(200, 's200', '111-1111', 's200@', sha2('1111',224));
 insert into memb(mno, name, tel, email, pwd)

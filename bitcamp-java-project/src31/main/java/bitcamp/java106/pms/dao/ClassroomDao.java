@@ -1,4 +1,4 @@
-package bitcamp.java106.pms.sql.dao;
+package bitcamp.java106.pms.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,8 +9,8 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
-import bitcamp.java106.pms.sql.annotation.Component;
-import bitcamp.java106.pms.sql.domain.Classroom;
+import bitcamp.java106.pms.annotation.Component;
+import bitcamp.java106.pms.domain.Classroom;
 
 @Component
 public class ClassroomDao {

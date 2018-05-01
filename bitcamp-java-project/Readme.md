@@ -1,4 +1,44 @@
 # 자바 프로젝트
+## src35 - Spring 프레임워크의 IoC 컨테이너 적용
+학습목표
+      - Spring IoC
+## src34 - 테이블에 Foreign Key 적용하기
+학습목표
+    - FK의 용도를 이해한다.
+    - 컬럼에 FK를 설정할 수 있다.
+    - 여러 테이블의 데이터를 조인하여 결과를 조회할 수 있다.
+작업내용 
+    - 기존의 테이블에서 FK를 적용한 새 테이블을 만든다.
+    - SQL 맵퍼 파일을 변경한다.
+
+## src33 - Data Persistence Framework인 Mybatis를 적용하라!
+학습목표
+    - JDBC 대신 Mybatis를 사용했을 때 이점을 이해한다.
+    - Mybatis를 설정하고 코드에 적용할 수 있다.
+작업내용
+    - Mybatis 프레임워크 관련 의존 라이브러리 가져온다.
+    - Mybatis 설정 파일을 준비한다.
+    - SqlSessionFactory를 준비한다.
+    - DAO에 SqlSessionFactory를 의존 객체로 주입한다.
+    - DAO는 JDBC 코드 대신 SqlSession을 사용하여 데이터를 처리한다.
+
+## src32 - DB 커넥션 풀을 적용하여 DB 연결 객체를 효율적으로 관리하라.
+학습목표
+    - "pooling 기법(일정 수량의 객체를 만들어 놓고 재사용하는 방법)"을 이해한다.
+    - "flyweight 디자인 패턴"을 이해하고 구현할 수 있다.
+    - "proxy 디자인 패턴"을 이해하고 구현할 수 있다.
+    - DB 커넥션 풀 개념을 이해하고 구현할 수 있다.
+작업내용
+    - DB 커넥션에 대해 "pooling 기법"을 적용하여 DB 커넥션 풀을 만든다.
+    - Connection 객체의 close() 메서드를 재정의하기 위해 proxy 패턴을 적용한다.
+
+## src31 - DAO에 JDBC 적용
+학습목표
+    - JDBC API 사용을 익힌다.
+    - gradle을 이용하여 의존 라이브러리를 관리하는 방법을 익힌다.
+작업내용
+    - gradle을 이용하여 JDBC driver를 자동으로 다운로드하고 classpath에 등록한다.
+    - DAO 클래스에 JDBC API를 적용한다.
 
 ## src30 - 멀티스레드 적용
 학습목표
@@ -97,7 +137,7 @@
 - 작업내용
     - 수업 정보의 등록/조회/변경/삭제할 수 있는 기능을 만든다.
 ```
-> java -classpath bin bitcamp.java106.pms.sql.App
+> java -classpath bin bitcamp.java106.pms.App
 명령> classroom/add
 [수업 등록]
 수업명? 자바106기
@@ -165,7 +205,7 @@
     - Team 클래스에서 팀 회원 관리 기능을 TeamMemberDao로 분리한다.
       이렇게 함으로써 Team 클래스가 좀 더 "high cohesion"을 유지하게 만든다.
 ```
-> java -classpath bin bitcamp.java106.pms.sql.App
+> java -classpath bin bitcamp.java106.pms.App
 명령> team/add
 팀명? 비트비트
 ...
@@ -247,7 +287,7 @@
 - 작업내용
     - 팀 멤버를 관리하는 기능을 추가한다.
 ```
-> java -classpath bin bitcamp.java106.pms.sql.App
+> java -classpath bin bitcamp.java106.pms.App
 명령> team/add
 팀명? 비트비트
 ...
@@ -331,7 +371,7 @@ lee 회원은 없습니다.
 - 작업내용
   - 게시판 데이터를 등록, 조회, 변경, 삭제하는 기능을 추가한다.
 ```
-> java -classpath bin bitcamp.java106.pms.sql.App
+> java -classpath bin bitcamp.java106.pms.App
 명령> board/add
 [게시글 등록]
 제목? 제목1
@@ -408,7 +448,7 @@ lee 회원은 없습니다.
   - 회원 정보 변경 및 삭제 기능을 추가한다.
 - 실행 결과
 ```
-> java -classpath bin bitcamp.java106.pms.sql.App
+> java -classpath bin bitcamp.java106.pms.App
 명령> team/update okok
 해당 이름의 팀이 없습니다.
 
@@ -451,7 +491,7 @@ lee 회원은 없습니다.
   - 사용자의 명령에 따라 팀 또는 회원 정보를 출력한다.
 - 실행결과
 ```
-> java -classpath bin bitcamp.java106.pms.sql.App
+> java -classpath bin bitcamp.java106.pms.App
 명령> (사용자을 입력을 기다리고 있어야 한다.)
 명령> help
 팀 등록 명령 : team/add
@@ -539,7 +579,7 @@ leem, leem@test.com, 1111
   - 5개를 넘으면 바로 출력한다.
 - 실행 결과
 ```
-> java -classpath bin bitcamp.java106.pms.sql.App
+> java -classpath bin bitcamp.java106.pms.App
 팀명? 비트비트
 설명? 자바 프로젝트 팀
 최대인원? 5
@@ -572,7 +612,7 @@ leem, leem@test.com, 1111
   - 사용자로부터 팀 정보를 입력 받아 출력하라.
 - 실행 결과
 ```
-> java -classpath bin bitcamp.java106.pms.sql.App
+> java -classpath bin bitcamp.java106.pms.App
 팀명? 비트비트
 설명? 자바 프로젝트 팀
 최대인원? 5

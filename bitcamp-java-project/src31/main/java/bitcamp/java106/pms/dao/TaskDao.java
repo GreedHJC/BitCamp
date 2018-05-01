@@ -1,4 +1,4 @@
-package bitcamp.java106.pms.sql.dao;
+package bitcamp.java106.pms.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,10 +9,10 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
-import bitcamp.java106.pms.sql.annotation.Component;
-import bitcamp.java106.pms.sql.domain.Member;
-import bitcamp.java106.pms.sql.domain.Task;
-import bitcamp.java106.pms.sql.domain.Team;
+import bitcamp.java106.pms.annotation.Component;
+import bitcamp.java106.pms.domain.Member;
+import bitcamp.java106.pms.domain.Task;
+import bitcamp.java106.pms.domain.Team;
 
 @Component
 public class TaskDao {

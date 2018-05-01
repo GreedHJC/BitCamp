@@ -1,4 +1,4 @@
-package bitcamp.java106.pms.sql.dao;
+package bitcamp.java106.pms.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import bitcamp.java106.pms.sql.annotation.Component;
+import bitcamp.java106.pms.annotation.Component;
 
 @Component
 public class TeamMemberDao {

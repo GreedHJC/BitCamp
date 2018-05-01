@@ -1,5 +1,5 @@
 // 미니 IoC 컨테이너 
-package bitcamp.java106.pms.sql.context;
+package bitcamp.java106.pms.context;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -9,7 +9,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import bitcamp.java106.pms.sql.annotation.Component;
+import bitcamp.java106.pms.annotation.Component;
 
 public class ApplicationContext {
 

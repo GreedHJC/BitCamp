@@ -5,8 +5,7 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
-
-import bitcamp.java106.pms.annotation.Component;
+import org.springframework.stereotype.Component;
 
 @Component
 public class TeamMemberDao {
@@ -23,7 +22,8 @@ public class TeamMemberDao {
             paramMap.put("teamName", teamName);
             paramMap.put("memberId", memberId);
             
-            int count = sqlSession.insert( "bitcamp.java106.pms.dao.TeamMemberDao.insert", paramMap);
+            int count = sqlSession.insert(
+                    "bitcamp.java106.pms.dao.TeamMemberDao.insert", paramMap);
             sqlSession.commit();
             return count;
         }
