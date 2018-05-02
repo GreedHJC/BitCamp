@@ -1,4 +1,4 @@
-// App과 컨트롤러 사이에 호출 규칙
+// DispatcherServlet과 컨트롤러 사이에 호출 규칙
 package bitcamp.java106.pms.controller;
 
 import bitcamp.java106.pms.server.ServerRequest;
@@ -11,5 +11,6 @@ public interface Controller {
     void service(ServerRequest request, ServerResponse response);
 }
 
+//ver 36 - servlet 규칙에 따라 파라미터의 타입 변경
 //ver 28 - service() 의 규칙 변경
 //ver 21 - 인터페이스 추가
