@@ -1,4 +1,4 @@
-package step11_Inheritance.ex18_Generalization;
+package step11_Inheritance.ex18_AbstractMathod;
 
 // 추상 클래스
 // => 서브클래스에게 공통 기능을 상속해주는 목적으로 만든 클래스이다.

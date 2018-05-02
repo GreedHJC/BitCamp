@@ -1,5 +1,5 @@
 // 상속 - 추상 메서드
-package step11_Inheritance.ex18_Generalization;
+package step11_Inheritance.ex18_AbstractMathod;
 
 // Car 클래스의 start()와 shutdown()은 서브 클래스에서 그대로 받아 사용해도 된다.
 // 그러나 run() 메서드는 서브 클래스마다 자신의 특징에 맞줘 재정의해야 한다.

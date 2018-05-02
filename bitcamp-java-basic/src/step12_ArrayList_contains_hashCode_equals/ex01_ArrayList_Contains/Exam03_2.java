@@ -1,7 +1,8 @@
 // contains() 와 hashCode(), equals()의 관계
-package step12_ArrayList_contains_hashCode_equals.ex01_ArrayList;
+package step12_ArrayList_contains_hashCode_equals.ex01_ArrayList_Contains;
 
-public class Exam02_1 {
+import java.util.ArrayList;
+public class Exam03_2 {
     public static void main(String[] args) {
         String s1 = new String("aaa");
         String s2 = new String("bbb");
@@ -14,7 +15,7 @@ public class Exam02_1 {
         list.add(s3);
         print(list);
         
-        System.out.println(list.contains(s4));
+        System.out.println(list.indexOf(s4));
     }
     
     static void print(ArrayList list) {

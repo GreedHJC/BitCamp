@@ -1,4 +1,4 @@
-package step11_Inheritance.ex17_Generalizatio;
+package step11_Inheritance.ex18_AbstractMathod;
 
 public class Truck extends Car {
     @Override

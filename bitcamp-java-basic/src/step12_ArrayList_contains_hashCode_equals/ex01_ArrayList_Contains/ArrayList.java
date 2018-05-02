@@ -1,4 +1,4 @@
-package step12_ArrayList_contains_hashCode_equals.ex01_ArrayList;
+package step12_ArrayList_contains_hashCode_equals.ex01_ArrayList_Contains;
 
 public class ArrayList {
     protected static final int DEFAULT_CAPACITY = 5;

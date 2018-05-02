@@ -1,5 +1,5 @@
 // 상속 - 추상클래스
-package step11_Inheritance.ex17_Generalizatio;
+package step11_Inheritance.ex17_AbstractClass;
 
 // Car 클래스는 Sedan과 Truck의 공통 기능을 관리하기 위해 만든 클래스이다.
 // 즉 Car 클래스는 직접 인스턴스를 만들어 사용하기 위해서 정의한 클래스가 아니라,

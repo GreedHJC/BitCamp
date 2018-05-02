@@ -1,5 +1,5 @@
 // contains() 와 hashCode(), equals()의 관계
-package step12_ArrayList_contains_hashCode_equals.ex01_ArrayList;
+package step12_ArrayList_contains_hashCode_equals.ex01_ArrayList_Contains;
 
 public class Exam03_1 {
     public static void main(String[] args) {

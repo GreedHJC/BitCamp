@@ -1,4 +1,4 @@
-package step11_Inheritance.ex18_Generalization;
+package step11_Inheritance.ex18_AbstractMathod;
 
 public class Sedan extends Car {
     @Override
