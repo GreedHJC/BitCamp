@@ -20,7 +20,7 @@
     <!-- value 속성에 지정한 값은 문자열이다. 
                     생성자를 호출하여 값을 넣을 때 
          IoC 컨테이너는 이 문자열을 파라미터 타입으로 형변환하여 넣는다.
-                    단 primitive type에 대해서만 형변환할 수 없다.
+                    단 primitive type에 대해서만 형변환할 수 있다.
                     다른 타입은 불가하다.-->
     <bean id="c3" class="bitcamp.java106.step03.Car">
         <constructor-arg index="0" value="티코"/>
