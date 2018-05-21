@@ -1,5 +1,5 @@
 // 자동으로 페이지를 이동하는 방법 - Refresh(HTML 페이지에 삽입)
-package step08.ex1;
+package step08.ex1_Refresh;
 
 import java.io.IOException;
 import java.io.PrintWriter;

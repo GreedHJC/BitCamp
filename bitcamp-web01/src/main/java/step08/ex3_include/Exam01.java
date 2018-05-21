@@ -1,5 +1,5 @@
-// 실행 위임 하는 방법 - forward
-package step08.ex2;
+// 다른 서블릿의 작업을 포함하기 - include
+package step08.ex3_include;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,26 +12,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @SuppressWarnings("serial")
-@WebServlet("/step08/ex2/exam03")
-public class Exam03 extends HttpServlet {
+@WebServlet("/step08/ex3/exam01")
+public class Exam01 extends HttpServlet {
     @Override
     protected void doGet(
             HttpServletRequest request, 
             HttpServletResponse response) throws ServletException, IOException {
         
-        String op = request.getParameter("op");
-        
-        if (!op.equals("*")) {
-            // + 연산자가 아니라면 다음 서블릿에게 실행을 위임한다.
-            RequestDispatcher 요청배달자 = request.getRequestDispatcher(
-                    "/step08/ex2/exam04");
-            요청배달자.forward(request, response);
-            return;
-        }
-        
-        int a = Integer.parseInt(request.getParameter("a"));
-        int b = Integer.parseInt(request.getParameter("b"));
-        
+        request.setCharacterEncoding("UTF-8");
+        String name = request.getParameter("name");;
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         
@@ -39,16 +28,20 @@ public class Exam03 extends HttpServlet {
         out.println("<html>");
         out.println("<head>");
         out.println("  <meta charset='UTF-8'>");
-        out.println("  <title>계산결과</title>");
+        out.println("  <title>include</title>");
+        RequestDispatcher 요청배달자 = request.getRequestDispatcher("/step08/ex3/common");
+        요청배달자.include(request, response);
         out.println("</head>");
         out.println("<body>");
-        out.println("<h1>exam03</h1>");
-        out.printf("<p>%d * %d = %d</p>\n", a, b, (a * b));
+        요청배달자 = request.getRequestDispatcher("/step08/ex3/header");
+        요청배달자.include(request, response);
+        out.printf("<h1>%s 님 반갑습니다</h1>\n",name);
+        요청배달자 = request.getRequestDispatcher("/step08/ex3/footer");
+        요청배달자.include(request, response);
         out.println("</body>");
         out.println("</html>");
     }
 }
-
 
 
 

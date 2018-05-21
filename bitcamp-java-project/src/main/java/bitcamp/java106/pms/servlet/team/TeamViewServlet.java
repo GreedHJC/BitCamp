@@ -84,16 +84,15 @@ public class TeamViewServlet extends HttpServlet {
             out.println("</p>");
             out.println("</form>");
             
-            // 팀 회원의 목록을 출력하는 것은 teamMemberListServlet에 맡긴다
-            RequestDispatcher 요청배달자 = request.getRequestDispatcher("team/member/list");
+            // 팀 회원의 목록을 출력하는 것은 TeamMemberListServlet에게 맡긴다.
+            RequestDispatcher 요청배달자 = request.getRequestDispatcher("/team/member/list");
             요청배달자.include(request, response);
-            // TeamMemberListServlet이 작업을 수행한 후 이 서블릿으로 되돌아 온다
+            // TeamMemberListServlet이 작업을 수행한 후 이 서블릿으로 되돌아 온다.
+               
         } catch (Exception e) {
             RequestDispatcher 요청배달자 = request.getRequestDispatcher("/error");
             request.setAttribute("error", e);
             request.setAttribute("title", "팀 상세조회 실패!");
-            // 다른 서블릿으로 실행을 위임할 때,
-            // 이전까지 버퍼로 출력한 데이터는 버린다.
             요청배달자.forward(request, response);
         }
         out.println("</body>");

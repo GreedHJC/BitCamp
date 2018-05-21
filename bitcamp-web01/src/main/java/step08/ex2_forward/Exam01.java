@@ -1,5 +1,5 @@
 // 실행 위임 하는 방법 - forward
-package step08.ex2;
+package step08.ex2_forward;
 
 import java.io.IOException;
 import java.io.PrintWriter;
