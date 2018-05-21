@@ -8,6 +8,10 @@ plugins {
     //war 파일을 다루는 작업이 정의된 플러그인
     id 'war'
 }
+compileJava {
+    //컴파일 할때 소스 파일의 인코딩 옵션을 추가할 것이다.
+    options.encoding = 'UTF-8'
+}
 
 
 dependencies {

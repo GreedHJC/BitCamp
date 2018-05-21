@@ -29,6 +29,7 @@ public class Exam01 extends GenericServlet {
         // UTF-16 ==> UTF-8
         response.setContentType("text/plain;charset=UTF-8");
         PrintWriter out = response.getWriter();
+        
         out.printf("name=%s\n", name);
         out.printf("age=%d\n", age);
         
