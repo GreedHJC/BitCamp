@@ -10,31 +10,34 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.context.ApplicationContext;
+
 import bitcamp.java106.pms.dao.ClassroomDao;
 import bitcamp.java106.pms.domain.Classroom;
-import bitcamp.java106.pms.servlet.InitServlet;
+import bitcamp.java106.pms.support.WebApplicationContextUtils;
 
 @SuppressWarnings("serial")
 @WebServlet("/classroom/view")
 public class ClassroomViewServlet extends HttpServlet {
 
     ClassroomDao classroomDao;
-    
+
     @Override
     public void init() throws ServletException {
-        classroomDao = InitServlet.getApplicationContext().getBean(ClassroomDao.class);
+        ApplicationContext iocContainer = WebApplicationContextUtils.getApplicationContext(this.getServletContext()); 
+        classroomDao = iocContainer.getBean(ClassroomDao.class);
     }
-    
+
     @Override
     protected void doGet(
             HttpServletRequest request, 
             HttpServletResponse response) throws ServletException, IOException {
 
         int no = Integer.parseInt(request.getParameter("no"));
-        
+
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        
+
         out.println("<!DOCTYPE html>");
         out.println("<html>");
         out.println("<head>");
@@ -43,14 +46,14 @@ public class ClassroomViewServlet extends HttpServlet {
         out.println("</head>");
         out.println("<body>");
         out.println("<h1>강의 보기</h1>");
-        
+
         try {
             Classroom classroom = classroomDao.selectOne(no);
-    
+
             if (classroom == null) {
                 throw new Exception("유효하지 않은 강의입니다.");
             }
-            
+
             out.println("<form action='update' method='post'>");
             out.printf("<input type='hidden' name='no' value='%d'>\n", no);
             out.println("<table border='1'>");
@@ -81,7 +84,7 @@ public class ClassroomViewServlet extends HttpServlet {
             out.printf("<a href='delete?no=%d'>삭제</a>\n", no);
             out.println("</p>");
             out.println("</form>");
-            
+
         } catch (Exception e) {
             RequestDispatcher 요청배달자 = request.getRequestDispatcher("/error");
             request.setAttribute("error", e);
