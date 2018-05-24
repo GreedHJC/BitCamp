@@ -20,51 +20,33 @@ import bitcamp.java106.pms.support.WebApplicationContextUtils;
 @SuppressWarnings("serial")
 @WebServlet("/classroom/list")
 public class ClassroomListServlet extends HttpServlet {
-    
+
     ClassroomDao classroomDao;
-    
+
     @Override
     public void init() throws ServletException {
-        ApplicationContext iocContainer = WebApplicationContextUtils.getApplicationContext(this.getServletContext()); 
-        classroomDao = iocContainer.getBean(ClassroomDao.class);    }
+        ApplicationContext iocContainer = 
+                WebApplicationContextUtils.getWebApplicationContext(
+                        this.getServletContext()); 
+        classroomDao = iocContainer.getBean(ClassroomDao.class);
+    }
 
     @Override
     protected void doGet(
             HttpServletRequest request, 
             HttpServletResponse response) throws ServletException, IOException {
-        
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        
-        out.println("<!DOCTYPE html>");
-        out.println("<html>");
-        out.println("<head>");
-        out.println("<meta charset='UTF-8'>");
-        out.println("<title>강의 목록</title>");
-        out.println("</head>");
-        out.println("<body>");
-        out.println("<h1>강의 목록</h1>");
-        
+
         try {
             List<Classroom> list = classroomDao.selectList();
-            
-            out.println("<p><a href='form.html'>새 강의</a></p>");
-            out.println("<table border='1'>");
-            out.println("<tr>");
-            out.println("    <th>번호</th><th>강의명</th><th>기간</th><th>강의실</th>");
-            out.println("</tr>");
-            
-            for (Classroom classroom : list) {
-                out.println("<tr>");
-                out.printf("    <td>%d</td>\n", classroom.getNo());
-                out.printf("    <td><a href='view?no=%d'>%s</a></td>\n", 
-                        classroom.getNo(), classroom.getTitle());
-                out.printf("    <td>%s~%s</td>\n",
-                        classroom.getStartDate(), classroom.getEndDate());
-                out.printf("    <td>%s</td>\n", classroom.getRoom());
-                out.println("</tr>");
-            }
-            out.println("</table>");
+
+            // JSP가 게시물 목록을 사용할 수 있도록 ServletRequest 보관소에 저장한다.
+            request.setAttribute("list", list);
+
+            // include 한다면, 이 서블릿에서 콘텐트 타입을 지정해야 한다.
+            response.setContentType("text/html;charset=UTF-8");
+
+            // JSP를 실행한다. 실행 완료 후 이 서블릿으로 되돌아 온다.
+            request.getRequestDispatcher("/classroom/list.jsp").include(request, response);
         } catch (Exception e) {
             RequestDispatcher 요청배달자 = request.getRequestDispatcher("/error");
             request.setAttribute("error", e);
@@ -73,8 +55,6 @@ public class ClassroomListServlet extends HttpServlet {
             // 이전까지 버퍼로 출력한 데이터는 버린다.
             요청배달자.forward(request, response);
         }
-        out.println("</body>");
-        out.println("</html>");
     }
 }
 

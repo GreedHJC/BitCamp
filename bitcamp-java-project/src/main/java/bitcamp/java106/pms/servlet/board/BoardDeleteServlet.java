@@ -17,21 +17,22 @@ import bitcamp.java106.pms.support.WebApplicationContextUtils;
 @SuppressWarnings("serial")
 @WebServlet("/board/delete")
 public class BoardDeleteServlet extends HttpServlet {
-
+    
     BoardDao boardDao;
-
+    
     @Override
     public void init() throws ServletException {
-        ApplicationContext iocContainer = WebApplicationContextUtils.getApplicationContext(this.getServletContext()); 
-        boardDao = iocContainer.getBean(BoardDao.class);    
+        ApplicationContext iocContainer = 
+                WebApplicationContextUtils.getWebApplicationContext(
+                        this.getServletContext()); 
+        boardDao = iocContainer.getBean(BoardDao.class);
     }
-
 
     @Override
     protected void doGet(
             HttpServletRequest request, 
             HttpServletResponse response) throws ServletException, IOException {
-
+        
         try {
             int no = Integer.parseInt(request.getParameter("no"));
             int count = boardDao.delete(no);
@@ -39,7 +40,7 @@ public class BoardDeleteServlet extends HttpServlet {
                 throw new Exception("해당 게시물이 없습니다.");
             }
             response.sendRedirect("list");
-
+            
         } catch (Exception e) {
             RequestDispatcher 요청배달자 = request.getRequestDispatcher("/error");
             request.setAttribute("error", e);
@@ -47,7 +48,7 @@ public class BoardDeleteServlet extends HttpServlet {
             요청배달자.forward(request, response);
         }
     }
-
+    
 }
 
 //ver 39 - forward 적용

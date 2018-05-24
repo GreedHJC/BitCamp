@@ -1,7 +1,66 @@
 # 자바 프로젝트
+
+## src41 - 쿠키와 세션 기술 적용
+학습목표
+    - 쿠키와 세션을 이용하여 로그인을 처리할 수 있다.
+    - Referer 헤더의 용도를 이해한다.
+작업내용
+    - 쿠키를 이용하여 아이디를 기억하는 로그인 폼 만들기
+    - 세션을 이용하여 로그인 사용자 정보를 보관하고 사용하기
+    - 로그인 후 Referer 헤더 값을 참조하여 이전 페이지로 이동하게 한다.
+    
+## src40 - Filter, Listener 기술 적용
+학습목표
+    - 필터의 구동 원리를 이해하고 적용할 수 있다.
+    - FilterConfig 객체를 사용하여 web.xml에 있는 init-param 값을 사용할 수 있다.
+    - 리스너의 구동 원리를 이해하고 적용할 수 있다.
+    - 컨텍스트 파라미터를 설정하고 사용할 수 있다.
+작업내용
+    - Filter에서 클라이언트 데이터 인코딩 지정을 수행한다.
+      (CharacterEncodingFilter)
+    - ServletContextListener 구현체에서 스프링 IoC 컨테이너 준비
+      (ContextLoaderListener, WebApplicationContextUtils)
+
+## src39 - forward, include 기술 적용 
+학습목표
+    - forward와 include의 용도를 이해하고 적용할 수 있다.
+작업내용
+    - 오류 처리 코드를 별도의 서블릿으로 분리하여 forward 한다.
+    - 팀 상세보기 화면을 여러 서블릿으로 분리하여 include 한다.
+
+## src38 - refresh, redirect 기술 적용
+학습목표
+    - refresh와 redirect의 동작을 이해하고 사용할 수 있다.
+작업내용
+    - 등록, 변경, 삭제 후 refresh와 redirect를 적용하기
+
+## src37 - 서블릿 기술 적용
+학습목표
+    - 서블릿을 만들고 배치할 수 있다.
+    - HTML 페이지를 만들 수 있다.
+작업내용 
+    - 기존의 컨트롤러를 서블릿으로 전환한다.
+    
+## src36 - Tomcat 서블릿 컨테이너 적용 
+학습목표
+    - 톰캣 서버를 구축하고 실행할 수 있다.
+    - 서블릿을 만들고 배치할 수 있다.
+    - Adapter 설계 패턴의 원리를 이해한다.
+작업내용
+    - 톰캣 서버를 설치한다.
+    - 서블릿 관련 라이브러리를 가져온다.
+    - 클라이언트 요청을 받아서 컨트롤러에게 전달할 DispatchServlet을 만든다.
+
 ## src35 - Spring 프레임워크의 IoC 컨테이너 적용
 학습목표
-      - Spring IoC
+    - Spring IoC 컨테이너를 설정할 수 있다.
+    - Spring IoC 컨테이너를 사용하여 객체를 관리할 수 있다.
+    - URL Encoding과 URL Decoding의 원리를 이해한다.
+작업내용
+    - Spring IoC 컨테이너 관련 라이브러리 추가 
+    - 기존의 ApplicationContext를 Spring IoC 컨테이너로 대체한다.
+    - 클라이언트가 보낸 데이터를 리턴할 때 URL Decoding 한다. 
+
 ## src34 - 테이블에 Foreign Key 적용하기
 학습목표
     - FK의 용도를 이해한다.

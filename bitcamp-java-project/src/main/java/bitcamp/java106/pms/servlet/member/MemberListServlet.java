@@ -25,7 +25,9 @@ public class MemberListServlet extends HttpServlet {
     
     @Override
     public void init() throws ServletException {
-        ApplicationContext iocContainer = WebApplicationContextUtils.getApplicationContext(this.getServletContext()); 
+        ApplicationContext iocContainer = 
+                WebApplicationContextUtils.getWebApplicationContext(
+                        this.getServletContext()); 
         memberDao = iocContainer.getBean(MemberDao.class);
     }
 
@@ -33,36 +35,19 @@ public class MemberListServlet extends HttpServlet {
     protected void doGet(
             HttpServletRequest request, 
             HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        
-        out.println("<!DOCTYPE html>");
-        out.println("<html>");
-        out.println("<head>");
-        out.println("<meta charset='UTF-8'>");
-        out.println("<title>멤버 목록</title>");
-        out.println("</head>");
-        out.println("<body>");
-        out.println("<h1>멤버 목록</h1>");
         
         try {
             List<Member> list = memberDao.selectList();
             
-            out.println("<p><a href='form.html'>새회원</a></p>");
-            out.println("<table border='1'>");
-            out.println("<tr>");
-            out.println("    <th>아이디</th><th>이메일</th>");
-            out.println("</tr>");
+            // JSP가 게시물 목록을 사용할 수 있도록 ServletRequest 보관소에 저장한다.
+            request.setAttribute("list", list);
             
-            for (Member member : list) {
-                out.println("<tr>");
-                out.printf("    <td><a href='view?id=%s'>%s</a></td><td>%s</td>\n",
-                    member.getId(),
-                    member.getId(),
-                    member.getEmail());
-                out.println("</tr>");
-            }
-            out.println("</table>");
+            // include 한다면, 이 서블릿에서 콘텐트 타입을 지정해야 한다.
+            response.setContentType("text/html;charset=UTF-8");
+            
+            // JSP를 실행한다. 실행 완료 후 이 서블릿으로 되돌아 온다.
+            request.getRequestDispatcher("/member/list.jsp").include(request, response);
+            
         } catch (Exception e) {
             RequestDispatcher 요청배달자 = request.getRequestDispatcher("/error");
             request.setAttribute("error", e);
@@ -71,8 +56,6 @@ public class MemberListServlet extends HttpServlet {
             // 이전까지 버퍼로 출력한 데이터는 버린다.
             요청배달자.forward(request, response);
         }
-        out.println("</body>");
-        out.println("</html>");
     }
 }
 

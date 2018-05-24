@@ -13,9 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.context.ApplicationContext;
 
-import bitcamp.java106.pms.dao.TaskDao;
 import bitcamp.java106.pms.dao.TeamDao;
-import bitcamp.java106.pms.dao.TeamMemberDao;
 import bitcamp.java106.pms.domain.Team;
 import bitcamp.java106.pms.support.WebApplicationContextUtils;
 
@@ -27,47 +25,26 @@ public class TeamListServlet extends HttpServlet {
     
     @Override
     public void init() throws ServletException {
-        ApplicationContext iocContainer = WebApplicationContextUtils.getApplicationContext(this.getServletContext()); 
+        ApplicationContext iocContainer = 
+                WebApplicationContextUtils.getWebApplicationContext(
+                        this.getServletContext()); 
         teamDao = iocContainer.getBean(TeamDao.class);
     }
-    
+
+
     @Override
     protected void doGet(
             HttpServletRequest request, 
             HttpServletResponse response) throws ServletException, IOException {
-        
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        
-        out.println("<!DOCTYPE html>");
-        out.println("<html>");
-        out.println("<head>");
-        out.println("<meta charset='UTF-8'>");
-        out.println("<title>팀 목록</title>");
-        out.println("</head>");
-        out.println("<body>");
-        out.println("<h1>팀 목록</h1>");
+
         
         try {
             List<Team> list = teamDao.selectList();
             
-            out.println("<p><a href='form.html'>새 팀</a></p>");
-            out.println("<table border='1'>");
-            out.println("<tr>");
-            out.println("    <th>팀명</th><th>최대인원</th><th>기간</th>");
-            out.println("</tr>");
+            request.setAttribute("list", list);
+            response.setContentType("text/html;charset=UTF-8");
+            request.getRequestDispatcher("/team/list.jsp").include(request, response);
             
-            for (Team team : list) {
-                out.println("<tr>");
-                out.printf("    <td><a href='view?name=%s'>%s</a></td><td>%d</td><td>%s~%s</td>\n",
-                        team.getName(),
-                        team.getName(),
-                        team.getMaxQty(), 
-                        team.getStartDate(), 
-                        team.getEndDate());
-                out.println("</tr>");
-            }
-            out.println("</table>");
         } catch (Exception e) {
             RequestDispatcher 요청배달자 = request.getRequestDispatcher("/error");
             request.setAttribute("error", e);
@@ -76,8 +53,6 @@ public class TeamListServlet extends HttpServlet {
             // 이전까지 버퍼로 출력한 데이터는 버린다.
             요청배달자.forward(request, response);
         }
-        out.println("</body>");
-        out.println("</html>");
     }
 }
 

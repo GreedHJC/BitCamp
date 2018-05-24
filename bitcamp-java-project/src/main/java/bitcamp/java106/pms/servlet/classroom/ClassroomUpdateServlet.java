@@ -23,14 +23,16 @@ public class ClassroomUpdateServlet extends HttpServlet {
     
     @Override
     public void init() throws ServletException {
-        ApplicationContext iocContainer = WebApplicationContextUtils.getApplicationContext(this.getServletContext()); 
-        classroomDao = iocContainer.getBean(ClassroomDao.class);    }
+        ApplicationContext iocContainer = 
+                WebApplicationContextUtils.getWebApplicationContext(
+                        this.getServletContext()); 
+        classroomDao = iocContainer.getBean(ClassroomDao.class);
+    }
     
     @Override
     protected void doPost(
             HttpServletRequest request, 
             HttpServletResponse response) throws ServletException, IOException {
-        
         
         try {
             Classroom classroom = new Classroom();
@@ -56,6 +58,7 @@ public class ClassroomUpdateServlet extends HttpServlet {
     
 }
 
+//ver 40 - 필터 적용
 //ver 39 - forward 적용
 //ver 38 - redirect 적용
 //ver 37 - 컨트롤러를 서블릿으로 변경
