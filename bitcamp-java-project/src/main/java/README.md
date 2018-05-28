@@ -1,10 +1,9 @@
 # 변경 내역
-- LoginServlet 추가
-- LogoutServlet 추가
-- HeaderServlet 추가
-- 목록보기, 상세보기 서블릿 변경
-- MemberDao 변경
-- MemberMapper.xml 변경
-
+- auth/form.jsp 변경
+- board/list.jsp, board/view.jsp 변경
+- classroom/list.jsp, classroom/view.jsp 변경
+- member/list.jsp, member/view.jsp 변경
+- team/list.jsp, team/view.jsp, team/member/list.jsp 변경
+- task/list.jsp, task/view.jsp 변경
 
 

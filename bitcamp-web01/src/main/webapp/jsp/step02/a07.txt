@@ -1,4 +1,0 @@
-<%@ page pageEncoding="UTF-8" %>
-<p> Hello!</p>
-<p> 한글~~~</p>
-<p><%= a * 2%></p>
