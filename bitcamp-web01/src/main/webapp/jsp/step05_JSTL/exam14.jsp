@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<h1>JSTL - c:parseDate</h1>
+<h1>JSTL - fmt:parseDate</h1>
 <pre>
 - 문자열을 입력 받아서 분석하여 java.util.Date 객체를 생성하는 태그
     &lt;fmt:parseDate 

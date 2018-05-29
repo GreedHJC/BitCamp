@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<h1>JSTL - c:forToken</h1>
+<h1>JSTL - c:forTokens</h1>
 <pre>
 - 특정 식별자로 구분된 문자열을 반복할 때 사용한다.
     &lt;c:forTokens items="문자열"

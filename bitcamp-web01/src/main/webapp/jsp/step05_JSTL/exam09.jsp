@@ -16,7 +16,7 @@
 <h1>JSTL - c:forEach : List와 Map</h1>
 <pre>
 - 반복문 기능을 하는 자바 코드를 만든다.
-    &lt;c:forEach items="배열|java.util.Collection|java.util.Iterator|java.util.Enumeration|java.util.Map|csv 문자열"
+    &lt;c:forEach items="배열 | java.util.Collection | java.util.Iterator | java.util.Enumeration | java.util.Map|csv 문자열"
                   var="목록에서 꺼낸 항목을 가리키는 이름"
                   begin="시작인덱스"
                   end="끝인덱스"

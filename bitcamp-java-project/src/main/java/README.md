@@ -1,9 +1,7 @@
 # 변경 내역
-- auth/form.jsp 변경
-- board/list.jsp, board/view.jsp 변경
-- classroom/list.jsp, classroom/view.jsp 변경
-- member/list.jsp, member/view.jsp 변경
-- team/list.jsp, team/view.jsp, team/member/list.jsp 변경
-- task/list.jsp, task/view.jsp 변경
-
+- DispatcherServlet 추가
+- web.xml 변경
+- 모든 서블릿 클래스 변경
+- JSP 페이지의 모든 링크에 *.do 붙이기
+ 
 
