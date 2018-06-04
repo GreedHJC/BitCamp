@@ -2,6 +2,13 @@
 public class Exam05 {
     public static void main(String[] args) {
         System.out.println("Exam05");
+        String str = "TaxoRank"; 
+
+        System.out.println(" Before str = " + str); 
+
+        str = str.replaceFirst(str.substring(0,1), str.substring(0,1).toLowerCase());
+
+        System.out.println(" After str = " + str);
     }
 }
 class G {}
